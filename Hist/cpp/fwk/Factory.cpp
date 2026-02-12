@@ -14,6 +14,7 @@
 #include "RunL3ResidualWqqm.h"
 #include "RunL3ResidualZeeJet.h"
 #include "RunL3ResidualZmmJet.h"
+#include "fwk/RunL3ResidualZmmJetModule.h"
 #include "fwk/RunWrapperModule.h"
 
 namespace fwk {
@@ -51,7 +52,7 @@ ModuleChain makeChain(const GlobalFlag& gf) {
                     chain.add(std::make_unique<RunWrapperModule<RunL3ResidualZeeJet>>(gf, "RunL3ResidualZeeJet"));
                     return chain;
                 case Chan::ZmmJet:
-                    chain.add(std::make_unique<RunWrapperModule<RunL3ResidualZmmJet>>(gf, "RunL3ResidualZmmJet"));
+                    chain.add(std::make_unique<RunL3ResidualZmmJetModule>(gf));
                     return chain;
                 case Chan::GamJet:
                     chain.add(std::make_unique<RunWrapperModule<RunL3ResidualGamJet>>(gf, "RunL3ResidualGamJet"));
