@@ -37,6 +37,7 @@ namespace fwk {
 class RunL3ResidualZmmJetModule final : public IModule {
 public:
     explicit RunL3ResidualZmmJetModule(const GlobalFlag& gf);
+    ~RunL3ResidualZmmJetModule() override;
 
     std::string name() const override { return "RunL3ResidualZmmJetModule"; }
 
