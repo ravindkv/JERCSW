@@ -22,13 +22,13 @@
 namespace fwk {
 
 L3ResidualBaseModule::L3ResidualBaseModule(const GlobalFlag& gf)
-    : globalFlags_(gf) {
-    loadChannelConfig(configPath());
-}
+    : globalFlags_(gf) {}
 
 L3ResidualBaseModule::~L3ResidualBaseModule() = default;
 
 void L3ResidualBaseModule::beginJob(Context& ctx) {
+    loadChannelConfig(configPath());
+
     assert(ctx.out && ctx.out->file() && !ctx.out->file()->IsZombie());
     ctx.out->mkdirAndCd("Base");
     origDir_ = gDirectory;
