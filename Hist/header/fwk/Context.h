@@ -15,8 +15,7 @@ class ConfigService;
 class LoggerService;
 
 struct Context {
-    explicit Context(const GlobalFlag& gfIn)
-        : gf(gfIn) {}
+    explicit Context(const GlobalFlag& gfIn);
 
     ~Context();
 
