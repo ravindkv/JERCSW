@@ -23,14 +23,17 @@
 
 class HemVeto;
 class JecUncBand;
-class PickEvent;
 class PickGenJet;
 class PickZmmJet;
-class ScaleJet;
-class ScaleMet;
-class ScaleMuon;
 class TDirectory;
 class VarBin;
+
+namespace fwk {
+class PickEventModule;
+class ScaleJetModule;
+class ScaleMetModule;
+class ScaleMuonModule;
+}
 
 namespace fwk {
 
@@ -77,11 +80,11 @@ private:
     std::unique_ptr<HistTime> histTime_;
 
     std::shared_ptr<PickZmmJet> pickZmmJet_;
-    std::shared_ptr<PickEvent> pickEvent_;
-    std::shared_ptr<ScaleMuon> scaleMuon_;
-    std::shared_ptr<ScaleJet> scaleJet_;
+    std::unique_ptr<PickEventModule> pickEventModule_;
+    std::unique_ptr<ScaleMuonModule> scaleMuonModule_;
+    std::unique_ptr<ScaleJetModule> scaleJetModule_;
     std::shared_ptr<PickGenJet> pickGenJet_;
-    std::shared_ptr<ScaleMet> scaleMet_;
+    std::unique_ptr<ScaleMetModule> scaleMetModule_;
     std::shared_ptr<JecUncBand> jecUncBand_;
     std::shared_ptr<MathL3Residual> mathL3Residual_;
     std::shared_ptr<HemVeto> hemVeto_;

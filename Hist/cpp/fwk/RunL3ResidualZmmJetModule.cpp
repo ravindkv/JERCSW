@@ -11,17 +11,17 @@
 #include "Helper.hpp"
 #include "HelperDelta.hpp"
 #include "JecUncBand.h"
-#include "PickEvent.h"
 #include "PickGenJet.h"
 #include "PickZmmJet.h"
 #include "ReadConfig.h"
-#include "ScaleJet.h"
-#include "ScaleMet.h"
-#include "ScaleMuon.h"
 #include "VarBin.h"
 #include "fwk/Context.h"
 #include "fwk/Event.h"
 #include "fwk/OutputService.h"
+#include "fwk/PickEventModule.h"
+#include "fwk/ScaleJetModule.h"
+#include "fwk/ScaleMetModule.h"
+#include "fwk/ScaleMuonModule.h"
 
 namespace fwk {
 
@@ -67,12 +67,12 @@ void RunL3ResidualZmmJetModule::beginJob(Context& ctx) {
     histTime_ = std::make_unique<HistTime>(origDir_, "passL3Residual", *varBin_, minTagPts_);
 
     pickZmmJet_ = std::make_shared<PickZmmJet>(globalFlags_);
-    pickEvent_ = std::make_shared<PickEvent>(globalFlags_);
+    pickEventModule_ = std::make_unique<PickEventModule>(globalFlags_);
 
-    scaleMuon_ = std::make_shared<ScaleMuon>(globalFlags_);
-    scaleJet_ = std::make_shared<ScaleJet>(globalFlags_);
+    scaleMuonModule_ = std::make_unique<ScaleMuonModule>(globalFlags_);
+    scaleJetModule_ = std::make_unique<ScaleJetModule>(globalFlags_);
     pickGenJet_ = std::make_shared<PickGenJet>(globalFlags_);
-    scaleMet_ = std::make_shared<ScaleMet>(globalFlags_);
+    scaleMetModule_ = std::make_unique<ScaleMetModule>(globalFlags_);
     jecUncBand_ = std::make_shared<JecUncBand>(globalFlags_);
     mathL3Residual_ = std::make_shared<MathL3Residual>(globalFlags_);
     hemVeto_ = std::make_shared<HemVeto>(globalFlags_);
@@ -92,16 +92,11 @@ bool RunL3ResidualZmmJetModule::analyze(Context& ctx, Event& ev) {
     double weight = 1.0;
     h1EventInCutflow_->fill("passSkim", weight);
 
-    if (!pickEvent_->passHlt(skimT)) return true;
-    h1EventInCutflow_->fill("passTrigger", weight);
+    if (!pickEventModule_->passCoreEventCuts(skimT, h1EventInCutflow_.get(), weight)) {
+        return true;
+    }
 
-    if (!pickEvent_->passGoodLumi(skimT->run, skimT->luminosityBlock)) return true;
-    h1EventInCutflow_->fill("passGoodLumi", weight);
-
-    if (!pickEvent_->passMatchedGenVtx(*skimT)) return true;
-    h1EventInCutflow_->fill("passMatchedGenVtx", weight);
-
-    scaleMuon_->applyCorrections(skimT);
+    scaleMuonModule_->applyCorrections(skimT);
 
     pickZmmJet_->pickMuons(*skimT);
     auto pickedMuons = pickZmmJet_->getPickedMuons();
@@ -114,7 +109,7 @@ bool RunL3ResidualZmmJetModule::analyze(Context& ctx, Event& ev) {
     p4RawTag = p4Tags.at(0);
     const double ptTag = p4Tag.Pt();
 
-    scaleJet_->applyCorrection(skimT);
+    scaleJetModule_->applyCorrections(skimT);
     pickZmmJet_->pickJets(*skimT, p4Tag);
 
     std::vector<int> jetsIndex = pickZmmJet_->getPickedJetsIndex();
@@ -136,15 +131,16 @@ bool RunL3ResidualZmmJetModule::analyze(Context& ctx, Event& ev) {
     if (std::fabs(deltaPhi - TMath::Pi()) >= maxDeltaPhiTagProbe_) return true;
     h1EventInCutflow_->fill("passDeltaPhiTagProbe", weight);
 
-    if (!pickEvent_->passJetVetoMapOnProbe(p4Probe)) return true;
-    h1EventInCutflow_->fill("passJetVetoMap", weight);
+    if (!pickEventModule_->passProbeJetVeto(p4Probe, h1EventInCutflow_.get(), weight)) {
+        return true;
+    }
 
     const double ptJet2 = p4Jet2.Pt();
     const double alpha = ptJet2 / ptTag;
     const bool passAlpha = (alpha < maxAlpha_ || ptJet2 < minPtJet2InAlpha_);
 
-    scaleMet_->applyCorrection(skimT, scaleJet_->getJetPtRaw());
-    p4CorrMet = scaleMet_->getP4CorrectedMet();
+    scaleMetModule_->applyCorrections(skimT, scaleJetModule_->jetPtRaw());
+    p4CorrMet = scaleMetModule_->correctedMet();
     p4CorrMet += p4RawTag - p4Tag;
 
     HistL3ResidualInput histL3ResidualInput = mathL3Residual_->computeResponse(p4Tag, p4Probe, p4CorrMet, p4Jetn);
@@ -165,8 +161,8 @@ bool RunL3ResidualZmmJetModule::analyze(Context& ctx, Event& ev) {
         weight *= hemVeto_->getMcWeight();
     }
     if (globalFlags_.isMC()) {
-        auto muSFs1 = scaleMuon_->getMuonSfs(*skimT, pickedMuons[0], ScaleMuon::SystLevel::Nominal);
-        auto muSFs2 = scaleMuon_->getMuonSfs(*skimT, pickedMuons[1], ScaleMuon::SystLevel::Nominal);
+        auto muSFs1 = scaleMuonModule_->getMuonSfs(*skimT, pickedMuons[0], ScaleMuon::SystLevel::Nominal);
+        auto muSFs2 = scaleMuonModule_->getMuonSfs(*skimT, pickedMuons[1], ScaleMuon::SystLevel::Nominal);
         weight *= muSFs1.total;
         weight *= muSFs2.total;
     }
