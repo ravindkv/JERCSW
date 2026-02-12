@@ -8,7 +8,7 @@ SRCDIR   = cpp
 OBJDIR   = obj
 
 # Sources and objects
-SOURCES  := $(wildcard $(SRCDIR)/*.cpp)
+SOURCES  := $(wildcard $(SRCDIR)/*.cpp) $(wildcard $(SRCDIR)/fwk/*.cpp)
 OBJECTS  := $(patsubst $(SRCDIR)/%.cpp, $(OBJDIR)/%.o, $(SOURCES))
 BINS     := runMain
 
@@ -49,6 +49,12 @@ $(BINS): $(OBJECTS) main.cpp
 # Rule for building object files + .d dependency files
 # Note that we do NOT specify header/%.h here; automatic dependencies from -MMD -MP do it for us.
 #@$(GCC) -c $< -o $@ $(CXXFLAGS) $(LDFLAGS)
+
+$(OBJDIR)/fwk/%.o : $(SRCDIR)/fwk/%.cpp
+	@echo "--> Creating object $@"
+	@mkdir -p $(OBJDIR)/fwk
+	@$(GCC) -c $< -o $@ $(CXXFLAGS)
+
 $(OBJDIR)/%.o : $(SRCDIR)/%.cpp
 	@echo "--> Creating object $@"
 	@mkdir -p $(OBJDIR)

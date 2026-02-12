@@ -1,18 +1,3 @@
-// L2Residuals
-#include "RunL2ResidualDiJet.h"
-#include "RunL2ResidualZmmJet.h"
-#include "RunL2ResidualZeeJet.h"
-#include "RunL2ResidualGamJet.h"
-
-// L3Residuals
-#include "RunL3ResidualZeeJet.h"
-#include "RunL3ResidualZmmJet.h"
-#include "RunL3ResidualGamJet.h"
-#include "RunL3ResidualGamJetFake.h"
-#include "RunL3ResidualMultiJet.h"
-#include "RunL3ResidualWqqe.h"
-#include "RunL3ResidualWqqm.h"
-
 // Common
 #include "SkimFile.h"
 #include "SkimTree.h"
@@ -21,6 +6,14 @@
 #include "GlobalFlag.h"
 #include "Helper.hpp"
 #include "Logger.h"
+#include "fwk/ConfigService.h"
+#include "fwk/Context.h"
+#include "fwk/CutflowService.h"
+#include "fwk/Driver.h"
+#include "fwk/Factory.h"
+#include "fwk/LoggerService.h"
+#include "fwk/OutputService.h"
+#include "fwk/TimerService.h"
 
 // system
 #include <sys/stat.h>
@@ -87,91 +80,7 @@ void printHelpAndExamples(const std::vector<std::string>& jsonFiles) {
     std::exit(1);
 }
 
-int dispatchRun(const GlobalFlag& globalFlag,
-                std::shared_ptr<SkimTree>& skimT,
-                ScaleEvent* scaleEvent,
-                TFile* fout) {
 
-    using DerivationLevel = GlobalFlag::JecDerivationLevel;
-    using Chan = GlobalFlag::Channel;
-
-    switch (globalFlag.getJecDerivationLevel()) {
-        case DerivationLevel::L2Residual:
-        case DerivationLevel::JerSF: {
-            switch (globalFlag.getChannel()) {
-                case Chan::DiJet: {
-                    std::cout << "==> Running L2Residual DiJet\n";
-                    auto r = std::make_unique<RunL2ResidualDiJet>(globalFlag);
-                    return r->Run(skimT, scaleEvent, fout);
-                }
-                case Chan::ZeeJet: {
-                    std::cout << "==> Running L2Residual ZeeJet\n";
-                    auto r = std::make_unique<RunL2ResidualZeeJet>(globalFlag);
-                    return r->Run(skimT, scaleEvent, fout);
-                }
-                case Chan::ZmmJet: {
-                    std::cout << "==> Running L2Residual ZmmJet\n";
-                    auto r = std::make_unique<RunL2ResidualZmmJet>(globalFlag);
-                    return r->Run(skimT, scaleEvent, fout);
-                }
-                case Chan::GamJet: {
-                    std::cout << "==> Running L2Residual GamJet\n";
-                    auto r = std::make_unique<RunL2ResidualGamJet>(globalFlag);
-                    return r->Run(skimT, scaleEvent, fout);
-                }
-                default:
-                    throw std::runtime_error("Unsupported channel for L2Residual: " + 
-                                globalFlag.getChannelStr());
-            }
-        }
-
-        case DerivationLevel::L3Residual: {
-            switch (globalFlag.getChannel()) {
-                case Chan::ZeeJet: {
-                    std::cout << "==> Running L3Residual ZeeJet\n";
-                    auto r = std::make_unique<RunL3ResidualZeeJet>(globalFlag);
-                    return r->Run(skimT, scaleEvent, fout);
-                }
-                case Chan::ZmmJet: {
-                    std::cout << "==> Running L3Residual ZmmJet\n";
-                    auto r = std::make_unique<RunL3ResidualZmmJet>(globalFlag);
-                    return r->Run(skimT, scaleEvent, fout);
-                }
-                case Chan::GamJet: {
-                    std::cout << "==> Running L3Residual GamJet\n";
-                    auto r = std::make_unique<RunL3ResidualGamJet>(globalFlag);
-                    return r->Run(skimT, scaleEvent, fout);
-                }
-                case Chan::GamJetFake: {
-                    std::cout << "==> Running L3Residual GamJetFake\n";
-                    auto r = std::make_unique<RunL3ResidualGamJetFake>(globalFlag);
-                    return r->Run(skimT, scaleEvent, fout);
-                }
-                case Chan::MultiJet: {
-                    std::cout << "==> Running L3Residual MultiJet\n";
-                    auto r = std::make_unique<RunL3ResidualMultiJet>(globalFlag);
-                    return r->Run(skimT, scaleEvent, fout);
-                }
-                case Chan::Wqqe: {
-                    std::cout << "==> Running L3Residual Wqqe\n";
-                    auto r = std::make_unique<RunL3ResidualWqqe>(globalFlag);
-                    return r->Run(skimT, scaleEvent, fout);
-                }
-                case Chan::Wqqm: {
-                    std::cout << "==> Running L3Residual Wqqm\n";
-                    auto r = std::make_unique<RunL3ResidualWqqm>(globalFlag);
-                    return r->Run(skimT, scaleEvent, fout);
-                }
-                default:
-                    throw std::runtime_error("Unsupported channel for L3Residual: " + 
-                                globalFlag.getChannelStr());
-            }
-        }
-
-        default:
-            throw std::runtime_error("Unsupported JEC step: " + globalFlag.getJecDerivationLevelStr());
-    }
-}
 
 } // namespace
 
@@ -288,10 +197,19 @@ int main(int argc, char* argv[]) {
             throw std::runtime_error("Failed to create output ROOT file: " + outDir + "/" + ioName);
         }
 
-        Helper::printBanner("Loop over events and fill Histos");
-        const int code = dispatchRun(globalFlag, skimT, scaleEvent.get(), fout.get());
+        Helper::printBanner("Run framework module chain");
 
-        return code;
+        fwk::Context ctx(globalFlag);
+        ctx.skimT = skimT;
+        ctx.scaleEvent = scaleEvent.get();
+        ctx.out = std::make_unique<fwk::OutputService>(fout.get());
+        ctx.cutflow = std::make_unique<fwk::CutflowService>();
+        ctx.timer = std::make_unique<fwk::TimerService>();
+        ctx.config = std::make_unique<fwk::ConfigService>();
+        ctx.log = std::make_unique<fwk::LoggerService>();
+
+        auto chain = fwk::makeChain(globalFlag);
+        return fwk::Driver::run(ctx, chain);
     }
     catch (const std::exception& e) {
         std::cerr << "FATAL EXCEPTION: " << e.what() << "\n";
