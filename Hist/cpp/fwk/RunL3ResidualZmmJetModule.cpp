@@ -30,6 +30,8 @@ RunL3ResidualZmmJetModule::RunL3ResidualZmmJetModule(const GlobalFlag& gf)
     loadConfig("config/RunL3ResidualZmmJet.json");
 }
 
+RunL3ResidualZmmJetModule::~RunL3ResidualZmmJetModule() = default;
+
 void RunL3ResidualZmmJetModule::loadConfig(const std::string& filename) {
     ReadConfig config(filename);
     cutflows_ = config.getValue<std::vector<std::string>>({"cutflows"});
@@ -90,7 +92,7 @@ bool RunL3ResidualZmmJetModule::analyze(Context& ctx, Event& ev) {
     double weight = 1.0;
     h1EventInCutflow_->fill("passSkim", weight);
 
-    if (!pickEvent_->passTrigger(*skimT)) return true;
+    if (!pickEvent_->passHlt(skimT)) return true;
     h1EventInCutflow_->fill("passTrigger", weight);
 
     if (!pickEvent_->passGoodLumi(skimT->run, skimT->luminosityBlock)) return true;
