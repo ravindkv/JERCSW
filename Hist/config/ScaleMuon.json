@@ -1,0 +1,71 @@
+{
+  "2016Pre": {
+    "muRochJsonPath": "POG/MUO/roccor/RoccoR2016aUL.txt",
+
+    "muIdSfPath":   "POG/MUO/Efficiencies_muon_generalTracks_Z_Run2016_UL_HIPM_ID.root",
+    "muIsoSfPath":  "POG/MUO/Efficiencies_muon_generalTracks_Z_Run2016_UL_HIPM_ISO.root",
+    "muTrigSfPath": {
+        "ZmmJet": "POG/MUO/Efficiencies_muon_generalTracks_Z_Run2016_UL_HIPM_SingleMuonTriggers.root",
+        "Wqqm":   "POG/MUO/Efficiencies_muon_generalTracks_Z_Run2016_UL_HIPM_SingleMuonTriggers.root"
+    },
+
+    "muIdSfHist":   "NUM_TrkHighPtID_DEN_TrackerMuons_abseta_pt",
+    "muIsoSfHist":  "NUM_TightRelIso_DEN_TightIDandIPCut_abseta_pt",
+    "muTrigSfHist": {
+        "ZmmJet": "NUM_IsoMu24_or_IsoTkMu24_DEN_CutBasedIdTight_and_PFIsoTight_eta_pt",
+        "Wqqm":   "NUM_IsoMu24_or_IsoTkMu24_DEN_CutBasedIdTight_and_PFIsoTight_eta_pt"
+    }
+  },
+  "2016Post": {
+    "muRochJsonPath": "POG/MUO/roccor/RoccoR2016bUL.txt",
+
+    "muIdSfPath":   "POG/MUO/Efficiencies_muon_generalTracks_Z_Run2016_UL_ID.root",
+    "muIsoSfPath":  "POG/MUO/Efficiencies_muon_generalTracks_Z_Run2016_UL_ISO.root",
+    "muTrigSfPath": {
+        "ZmmJet": "POG/MUO/Efficiencies_muon_generalTracks_Z_Run2016_UL_SingleMuonTriggers.root",
+        "Wqqm":   "POG/MUO/Efficiencies_muon_generalTracks_Z_Run2016_UL_SingleMuonTriggers.root"
+    },
+
+    "muIdSfHist":   "NUM_TrkHighPtID_DEN_TrackerMuons_abseta_pt",
+    "muIsoSfHist":  "NUM_TightRelIso_DEN_TightIDandIPCut_abseta_pt",
+    "muTrigSfHist": {
+        "ZmmJet": "NUM_IsoMu24_or_IsoTkMu24_DEN_CutBasedIdTight_and_PFIsoTight_eta_pt",
+        "Wqqm":   "NUM_IsoMu24_or_IsoTkMu24_DEN_CutBasedIdTight_and_PFIsoTight_eta_pt"
+    }
+  },
+  "2017": {
+    "muRochJsonPath": "POG/MUO/roccor/RoccoR2017UL.txt",
+
+    "muIdSfPath":   "POG/MUO/Efficiencies_muon_generalTracks_Z_Run2017_UL_ID.root",
+    "muIsoSfPath":  "POG/MUO/Efficiencies_muon_generalTracks_Z_Run2017_UL_ISO.root",
+    "muTrigSfPath": {
+        "ZmmJet": "POG/MUO/Efficiencies_muon_generalTracks_Z_Run2017_UL_SingleMuonTriggers.root",
+        "Wqqm":   "POG/MUO/Efficiencies_muon_generalTracks_Z_Run2017_UL_SingleMuonTriggers.root"
+    },
+
+    "muIdSfHist":   "NUM_TrkHighPtID_DEN_TrackerMuons_abseta_pt",
+    "muIsoSfHist":  "NUM_TightRelIso_DEN_TightIDandIPCut_abseta_pt",
+    "muTrigSfHist": {
+        "ZmmJet": "NUM_IsoMu27_DEN_CutBasedIdTight_and_PFIsoTight_eta_pt",
+        "Wqqm":   "NUM_IsoMu27_DEN_CutBasedIdTight_and_PFIsoTight_eta_pt"
+    }
+  },
+  "2018": {
+    "muRochJsonPath": "POG/MUO/roccor/RoccoR2018UL.txt",
+
+    "muIdSfPath":   "POG/MUO/Efficiencies_muon_generalTracks_Z_Run2018_UL_ID.root",
+    "muIsoSfPath":  "POG/MUO/Efficiencies_muon_generalTracks_Z_Run2018_UL_ISO.root",
+    "muTrigSfPath": {
+        "ZmmJet": "POG/MUO/Efficiencies_muon_generalTracks_Z_Run2018_UL_SingleMuonTriggers.root",
+        "Wqqm":   "POG/MUO/Efficiencies_muon_generalTracks_Z_Run2018_UL_SingleMuonTriggers.root"
+    },
+
+    "muIdSfHist":   "NUM_TrkHighPtID_DEN_TrackerMuons_abseta_pt",
+    "muIsoSfHist":  "NUM_TightRelIso_DEN_TightIDandIPCut_abseta_pt",
+    "muTrigSfHist": {
+        "ZmmJet": "NUM_IsoMu24_DEN_CutBasedIdTight_and_PFIsoTight_eta_pt",
+        "Wqqm":   "NUM_IsoMu24_DEN_CutBasedIdTight_and_PFIsoTight_eta_pt"
+    }
+  }
+}
+

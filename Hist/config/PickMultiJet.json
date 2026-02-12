@@ -1,0 +1,11 @@
+{
+  "pickJet": {
+    "minPtProbe":       30.0,
+    "jetIdLabel": "TightLepVeto",
+    "minPtRecoil":     30.0,
+    "maxEtaRecoil":     2.5,
+    "minDPhiRecoil":    1.0,
+    "minPtOther":      15.0
+  }
+}
+

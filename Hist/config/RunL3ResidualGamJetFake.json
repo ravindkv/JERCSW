@@ -1,0 +1,25 @@
+{
+  "cutflows": [
+    "passSkim",
+    "passHlt",
+    "passGoodLumi",
+    "passAtleast2Jets",
+    "passExactly1Tag",
+    "passTagBarrel",
+    "passJetVetoMap",
+    "passDeltaPhiTagProbe",
+    "passAlpha",
+    "passL3Residual"
+  ],
+  "minTagPts": [30, 200],
+  "maxDeltaPhiTagProbe": 0.44,
+  "maxDeltaRgenJetPhoton": 0.2,
+  "alphaCuts": [1.0, 0.50, 0.20, 0.10],
+  "maxAlpha": 1.0,
+  "minPtJet2InAlpha": 30,
+  "minTagPt": 15,
+  "maxTagEta": 1.3,
+  "minResp": 0.3,
+  "maxResp": 1.7
+}
+

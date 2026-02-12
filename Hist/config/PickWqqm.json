@@ -1,0 +1,14 @@
+{
+  "muPtDefault":      26.0,
+  "muPt2017":         29.0,
+  "muEtaMax":         2.4,
+  "muRequireTightId": true,
+  "muIsoMax":         0.15,
+  "muDxyMax":         0.2,
+  "muDzMax":          0.5,
+  "jetMinPt":         30.0,
+  "jetMaxEta":        2.5,
+  "jetIdLabel":       "TightLepVeto"
+}
+
+

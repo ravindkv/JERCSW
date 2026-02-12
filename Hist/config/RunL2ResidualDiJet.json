@@ -1,0 +1,19 @@
+{
+  "cutflows": [
+    "passSkim",
+    "passHlt",
+    "passGoodLumi",
+    "passMatchedGenVtx",
+    "passTagAndProbe",
+    "passPtHatFilter",
+    "passDeltaPhiTnP",
+    "passMaxAsymmetry",
+    "passJetVetoMap",
+    "passL2Residual"
+  ],
+  "minRefPts": [30, 110, 230],
+  "maxAsymmetry":     0.3,
+  "dPhiWindow":        0.3,
+  "fillPerHlt": false
+}
+

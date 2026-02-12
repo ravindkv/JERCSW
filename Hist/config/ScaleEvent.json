@@ -1,0 +1,23 @@
+{
+  "2016Pre": {
+    "puJsonPath": "POG/PU/2016preVFP_UL/puWeights.json",
+    "puName": "Collisions16_UltraLegacy_goldenJSON",
+    "minbXsec": 69.2
+  },
+  "2016Post": {
+    "puJsonPath": "POG/PU/2016postVFP_UL/puWeights.json",
+    "puName": "Collisions16_UltraLegacy_goldenJSON",
+    "minbXsec": 69.2
+  },
+  "2017": {
+    "puJsonPath": "POG/PU/2017_UL/puWeights.json",
+    "puName": "Collisions17_UltraLegacy_goldenJSON",
+    "minbXsec": 69.2
+  },
+  "2018": {
+    "puJsonPath": "POG/PU/2018_UL/puWeights.json",
+    "puName": "Collisions18_UltraLegacy_goldenJSON",
+    "minbXsec": 69.2
+  }
+}
+

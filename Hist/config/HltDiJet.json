@@ -1,0 +1,53 @@
+{
+  "2016": {
+    "HLT_DiPFJetAve40": { "trigPt": 40, "ptMin": 40, "ptMax": 85, "absEtaMin": 0.0, "absEtaMax": 5.2, "lumi": 0.0001 },
+    "HLT_DiPFJetAve60": { "trigPt": 60, "ptMin": 85, "ptMax": 100, "absEtaMin": 0.0, "absEtaMax": 3.139, "lumi": 0.0017 },
+    "HLT_DiPFJetAve80": { "trigPt": 80, "ptMin": 100, "ptMax": 155, "absEtaMin": 0.0, "absEtaMax": 3.139, "lumi": 0.0042 },
+    "HLT_DiPFJetAve140": { "trigPt": 140, "ptMin": 155, "ptMax": 210, "absEtaMin": 0.0, "absEtaMax": 3.139, "lumi": 0.028 },
+    "HLT_DiPFJetAve200": { "trigPt": 200, "ptMin": 210, "ptMax": 300, "absEtaMin": 0.0, "absEtaMax": 3.139, "lumi": 0.1407 },
+    "HLT_DiPFJetAve260": { "trigPt": 260, "ptMin": 300, "ptMax": 400, "absEtaMin": 0.0, "absEtaMax": 3.139, "lumi": 0.5288 },
+    "HLT_DiPFJetAve320": { "trigPt": 320, "ptMin": 400, "ptMax": 500, "absEtaMin": 0.0, "absEtaMax": 3.139, "lumi": 3.0037 },
+    "HLT_DiPFJetAve400": { "trigPt": 400, "ptMin": 500, "ptMax": 600, "absEtaMin": 0.0, "absEtaMax": 3.139, "lumi": 9.1329 },
+    "HLT_DiPFJetAve500": { "trigPt": 500, "ptMin": 600, "ptMax": 6500, "absEtaMin": 0.0, "absEtaMax": 3.139, "lumi": 29.6675 },
+    "HLT_DiPFJetAve60_HFJEC": { "trigPt": 60, "ptMin": 85, "ptMax": 100, "absEtaMin": 3.139, "absEtaMax": 5.2, "lumi": 0.0198 },
+    "HLT_DiPFJetAve80_HFJEC": { "trigPt": 80, "ptMin": 100, "ptMax": 125, "absEtaMin": 3.139, "absEtaMax": 5.2, "lumi": 0.0289 },
+    "HLT_DiPFJetAve100_HFJEC": { "trigPt": 100, "ptMin": 125, "ptMax": 180, "absEtaMin": 3.139, "absEtaMax": 5.2, "lumi": 0.099 },
+    "HLT_DiPFJetAve160_HFJEC": { "trigPt": 160, "ptMin": 180, "ptMax": 250, "absEtaMin": 3.139, "absEtaMax": 5.2, "lumi": 0.5656 },
+    "HLT_DiPFJetAve220_HFJEC": { "trigPt": 220, "ptMin": 250, "ptMax": 350, "absEtaMin": 3.139, "absEtaMax": 5.2, "lumi": 29.3666 },
+    "HLT_DiPFJetAve300_HFJEC": { "trigPt": 300, "ptMin": 350, "ptMax": 6500, "absEtaMin": 3.139, "absEtaMax": 5.2, "lumi": 36.31 }
+  },
+  "2017": {
+    "HLT_DiPFJetAve40": { "trigPt": 40, "ptMin": 40, "ptMax": 85, "absEtaMin": 0.0, "absEtaMax": 5.2, "lumi": 0.0003 },
+    "HLT_DiPFJetAve60": { "trigPt": 60, "ptMin": 85, "ptMax": 100, "absEtaMin": 0.0, "absEtaMax": 3.139, "lumi": 0.0007 },
+    "HLT_DiPFJetAve80": { "trigPt": 80, "ptMin": 100, "ptMax": 155, "absEtaMin": 0.0, "absEtaMax": 3.139, "lumi": 0.002 },
+    "HLT_DiPFJetAve140": { "trigPt": 140, "ptMin": 155, "ptMax": 210, "absEtaMin": 0.0, "absEtaMax": 3.139, "lumi": 0.0199 },
+    "HLT_DiPFJetAve200": { "trigPt": 200, "ptMin": 210, "ptMax": 300, "absEtaMin": 0.0, "absEtaMax": 3.139, "lumi": 0.0878 },
+    "HLT_DiPFJetAve260": { "trigPt": 260, "ptMin": 300, "ptMax": 400, "absEtaMin": 0.0, "absEtaMax": 3.139, "lumi": 0.2976 },
+    "HLT_DiPFJetAve320": { "trigPt": 320, "ptMin": 400, "ptMax": 500, "absEtaMin": 0.0, "absEtaMax": 3.139, "lumi": 0.779 },
+    "HLT_DiPFJetAve400": { "trigPt": 400, "ptMin": 500, "ptMax": 600, "absEtaMin": 0.0, "absEtaMax": 3.139, "lumi": 2.1657 },
+    "HLT_DiPFJetAve500": { "trigPt": 500, "ptMin": 600, "ptMax": 6500, "absEtaMin": 0.0, "absEtaMax": 3.139, "lumi": 6.7807 },
+    "HLT_DiPFJetAve60_HFJEC": { "trigPt": 60, "ptMin": 85, "ptMax": 100, "absEtaMin": 3.139, "absEtaMax": 5.2, "lumi": 0.0021 },
+    "HLT_DiPFJetAve80_HFJEC": { "trigPt": 80, "ptMin": 100, "ptMax": 125, "absEtaMin": 3.139, "absEtaMax": 5.2, "lumi": 0.0136 },
+    "HLT_DiPFJetAve100_HFJEC": { "trigPt": 100, "ptMin": 125, "ptMax": 180, "absEtaMin": 3.139, "absEtaMax": 5.2, "lumi": 0.0358 },
+    "HLT_DiPFJetAve160_HFJEC": { "trigPt": 160, "ptMin": 180, "ptMax": 250, "absEtaMin": 3.139, "absEtaMax": 5.2, "lumi": 0.2047 },
+    "HLT_DiPFJetAve220_HFJEC": { "trigPt": 220, "ptMin": 250, "ptMax": 350, "absEtaMin": 3.139, "absEtaMax": 5.2, "lumi": 4.3246 },
+    "HLT_DiPFJetAve300_HFJEC": { "trigPt": 300, "ptMin": 350, "ptMax": 6500, "absEtaMin": 3.139, "absEtaMax": 5.2, "lumi": 27.1219 }
+  },
+  "2018": {
+    "HLT_DiPFJetAve40": { "trigPt": 40, "ptMin": 40, "ptMax": 85, "absEtaMin": 0.0, "absEtaMax": 5.2, "lumi": 0.0002 },
+    "HLT_DiPFJetAve60": { "trigPt": 60, "ptMin": 85, "ptMax": 100, "absEtaMin": 0.0, "absEtaMax": 3.139, "lumi": 0.001 },
+    "HLT_DiPFJetAve80": { "trigPt": 80, "ptMin": 100, "ptMax": 155, "absEtaMin": 0.0, "absEtaMax": 3.139, "lumi": 0.0054 },
+    "HLT_DiPFJetAve140": { "trigPt": 140, "ptMin": 155, "ptMax": 210, "absEtaMin": 0.0, "absEtaMax": 3.139, "lumi": 0.0608 },
+    "HLT_DiPFJetAve200": { "trigPt": 200, "ptMin": 210, "ptMax": 300, "absEtaMin": 0.0, "absEtaMax": 3.139, "lumi": 0.2615 },
+    "HLT_DiPFJetAve260": { "trigPt": 260, "ptMin": 300, "ptMax": 400, "absEtaMin": 0.0, "absEtaMax": 3.139, "lumi": 0.6811 },
+    "HLT_DiPFJetAve320": { "trigPt": 320, "ptMin": 400, "ptMax": 500, "absEtaMin": 0.0, "absEtaMax": 3.139, "lumi": 1.8088 },
+    "HLT_DiPFJetAve400": { "trigPt": 400, "ptMin": 500, "ptMax": 600, "absEtaMin": 0.0, "absEtaMax": 3.139, "lumi": 5.4209 },
+    "HLT_DiPFJetAve500": { "trigPt": 500, "ptMin": 600, "ptMax": 6500, "absEtaMin": 0.0, "absEtaMax": 3.139, "lumi": 21.2819 },
+    "HLT_DiPFJetAve60_HFJEC": { "trigPt": 60, "ptMin": 85, "ptMax": 100, "absEtaMin": 3.139, "absEtaMax": 5.2, "lumi": 0.0036 },
+    "HLT_DiPFJetAve80_HFJEC": { "trigPt": 80, "ptMin": 100, "ptMax": 125, "absEtaMin": 3.139, "absEtaMax": 5.2, "lumi": 0.0399 },
+    "HLT_DiPFJetAve100_HFJEC": { "trigPt": 100, "ptMin": 125, "ptMax": 180, "absEtaMin": 3.139, "absEtaMax": 5.2, "lumi": 0.1655 },
+    "HLT_DiPFJetAve160_HFJEC": { "trigPt": 160, "ptMin": 180, "ptMax": 250, "absEtaMin": 3.139, "absEtaMax": 5.2, "lumi": 1.1221 },
+    "HLT_DiPFJetAve220_HFJEC": { "trigPt": 220, "ptMin": 250, "ptMax": 350, "absEtaMin": 3.139, "absEtaMax": 5.2, "lumi": 10.7579 },
+    "HLT_DiPFJetAve300_HFJEC": { "trigPt": 300, "ptMin": 350, "ptMax": 6500, "absEtaMin": 3.139, "absEtaMax": 5.2, "lumi": 59.8278 }
+  }
+}

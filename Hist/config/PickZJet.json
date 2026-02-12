@@ -1,0 +1,26 @@
+{
+  "tagPick": {
+    "mass": 91.1876,
+    "massWindow": 20.0,
+    "minPt": 12.0,
+    "minPtForAK8": 180.0,
+    "maxEta": 1.3,
+    "nLepMin": 2,
+    "nLepMax": 3
+  },
+  "jetPick": {
+    "minPt": 12.0,
+    "minPtForAK8": 180.0,
+    "maxEtaProbe": 1.3,
+    "minDeltaRtoLepton": 0.44,
+    "jetIdLabel": "TightLepVeto",
+    "requiredJet_lepIdx1": -1,
+    "requiredJet_lepIdx2": -1
+  },
+  "genTagPick": {
+    "maxDeltaR": 0.2,
+    "minPt": 12.0,
+    "minPtForAK8": 180.0
+  }
+}
+

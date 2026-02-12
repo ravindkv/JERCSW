@@ -1,0 +1,7 @@
+{
+"match":{
+    "maxDeltaRGenMatch": 0.3, 
+    "minGenPtOverRecoPt": 0.8,
+    "minGenPartPt": 5.0
+    }
+}

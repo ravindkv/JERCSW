@@ -1,0 +1,15 @@
+{
+  "muonPick": {
+    "minPtLead": 20.0,
+    "minPtSubLead": 10.0,
+    "maxEta": 2.3,
+    "tightId": 1,
+    "maxRelIso": 0.15,
+    "maxDxy": 0.2,
+    "maxDz": 0.5
+  },
+  "genMuonPick": {
+    "pdgId": 13
+  }
+}
+

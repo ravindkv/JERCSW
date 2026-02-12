@@ -1,0 +1,37 @@
+{
+  "2016Pre": {
+    "jetVetoJsonPath": "POG/JME/2016preVFP_UL/jetvetomaps.json.gz",
+    "jetVetoName": "Summer19UL16_V1",
+    "jetVetoKey": "jetvetomap_hot",
+    "jetIdLabel": "TightLepVeto",
+    "goldenLumiJsonPath": "POG/LUM/Golden/Cert_271036-284044_13TeV_Legacy2016_Collisions16_JSON.txt"
+  },
+  "2016Post": {
+    "jetVetoJsonPath": "POG/JME/2016postVFP_UL/jetvetomaps.json.gz",
+    "jetVetoName": "Summer19UL16_V1",
+    "jetVetoKey": "jetvetomap_hot",
+    "jetIdLabel": "TightLepVeto",
+    "goldenLumiJsonPath": "POG/LUM/Golden/Cert_271036-284044_13TeV_Legacy2016_Collisions16_JSON.txt"
+  },
+  "2017": {
+    "jetVetoJsonPath": "POG/JME/2017_UL/jetvetomaps.json.gz",
+    "jetVetoName": "Summer19UL17_V1",
+    "jetVetoKey": "jetvetomap_hot",
+    "jetIdLabel": "TightLepVeto",
+    "goldenLumiJsonPath": "POG/LUM/Golden/Cert_294927-306462_13TeV_UL2017_Collisions17_GoldenJSON.txt"
+  },
+  "2018": {
+    "jetVetoJsonPath": "POG/JME/2018_UL/jetvetomaps.json.gz",
+    "jetVetoName": "Summer19UL18_V1",
+    "jetVetoKey": "jetvetomap_hot",
+    "jetIdLabel": "TightLepVeto",
+    "goldenLumiJsonPath": "POG/LUM/Golden/Cert_314472-325175_13TeV_Legacy2018_Collisions18_JSON.txt"
+  },
+  "pthatFilter": {
+    "doPtHatFilter": true
+  },
+  "diffPVzGenVtxz": {
+    "maxDiff": 0.2
+  }
+}
+

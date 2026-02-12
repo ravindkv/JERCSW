@@ -1,0 +1,9 @@
+{
+    "2018":{
+        "jesUncBandJsonPath": "POG/JME/Summer20UL_ForPuppi/Run2Summer20UL18/jet_jerc.json.gz",
+        "jerSfUncBandJsonPath": "POG/JME/2018_UL/jet_jerc_WithL2ResNoUnc.json.gz",
+        "CMS_scale_j_Total": "Summer20UL18_V1_MC_Total_AK4PFPuppi",
+        "CMS_res_j_SF": "Summer19UL18_JRV2_MC_ScaleFactor_AK4PFchs"
+    }
+}
+

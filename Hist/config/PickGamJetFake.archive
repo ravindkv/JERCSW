@@ -1,0 +1,17 @@
+{
+  "photonPick": {
+    "minPt": 15.0,
+    "tightId": 3
+  },
+  "jetPick": {
+    "minPt": 15.0,
+    "maxEta": 1.3,
+    "minId": 6,
+    "minDeltaR": 0.2,
+    "minPtOther": 15.0
+  },
+  "genJetPick": {
+    "maxDeltaR": 0.4
+  }
+}
+

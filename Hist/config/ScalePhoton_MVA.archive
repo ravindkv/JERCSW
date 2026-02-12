@@ -1,0 +1,51 @@
+{
+  "2016Pre": {
+    "phoSsJsonPath": "POG/EGM/S+SJSON/2022Re-recoBCD/photonSS.json",
+    "phoSsName": "2022Re-recoBCD_SmearingJSON",
+
+    "phoIdSfPath": "POG/EGM/Photon/egammaEffi.txt_EGM2D_Pho_wp80_UL16.root",
+    "phoPsSfPath": "POG/EGM/Photon/HasPix_SummaryPlot_UL16_preVFP.root",
+    "phoCsSfPath": "POG/EGM/Photon/CSEV_SummaryPlot_UL16_preVFP.root",
+
+    "phoIdSfHist": "EGamma_SF2D",
+    "phoPsSfHist": "MVAID/SF_HasPix_MVAID",
+    "phoCsSfHist": "MVAID/SF_CSEV_MVAID"
+  },
+  "2016Post": {
+    "phoSsJsonPath": "POG/EGM/S+SJSON/2022Re-recoBCD/photonSS.json",
+    "phoSsName": "2022Re-recoBCD_SmearingJSON",
+
+    "phoIdSfPath": "POG/EGM/Photon/egammaEffi.txt_EGM2D_Pho_MVA80_UL16_postVFP.root",
+    "phoPsSfPath": "POG/EGM/Photon/HasPix_SummaryPlot_UL16_postVFP.root",
+    "phoCsSfPath": "POG/EGM/Photon/CSEV_SummaryPlot_UL16_postVFP.root",
+
+    "phoIdSfHist": "EGamma_SF2D",
+    "phoPsSfHist": "MVAID/SF_HasPix_MVAID",
+    "phoCsSfHist": "MVAID/SF_CSEV_MVAID"
+  },
+  "2017": {
+    "phoSsJsonPath": "POG/EGM/S+SJSON/2022Re-recoBCD/photonSS.json",
+    "phoSsName": "2022Re-recoBCD_SmearingJSON",
+
+    "phoIdSfPath": "POG/EGM/Photon/egammaEffi.txt_EGM2D_PHO_MVA80_UL17.root",
+    "phoPsSfPath": "POG/EGM/Photon/HasPix_SummaryPlot_UL17.root",
+    "phoCsSfPath": "POG/EGM/Photon/CSEV_SummaryPlot_UL17.root",
+
+    "phoIdSfHist": "EGamma_SF2D",
+    "phoPsSfHist": "MVAID/SF_HasPix_MVAID",
+    "phoCsSfHist": "MVAID/SF_CSEV_MVAID"
+  },
+  "2018": {
+    "phoSsJsonPath": "POG/EGM/S+SJSON/2022Re-recoBCD/photonSS.json",
+    "phoSsName": "2022Re-recoBCD_SmearingJSON",
+
+    "phoIdSfPath": "POG/EGM/Photon/egammaEffi.txt_EGM2D_Pho_wp80.root_UL18.root",
+    "phoPsSfPath": "POG/EGM/Photon/HasPix_SummaryPlot_UL18.root",
+    "phoCsSfPath": "POG/EGM/Photon/CSEV_SummaryPlot_UL18.root",
+
+    "phoIdSfHist": "EGamma_SF2D",
+    "phoPsSfHist": "MVAID/SF_HasPix_MVAID",
+    "phoCsSfHist": "MVAID/SF_CSEV_MVAID"
+  }
+}
+

@@ -1,0 +1,149 @@
+# global config file for jerc2json
+# (edit to suit your needs)
+
+# where to download correction tarballs from
+sources:
+  jec:
+    type: github
+    url: https://github.com/cms-jet/JECDatabase
+    branch: master
+  jer:
+    type: github
+    url: https://github.com/cms-jet/JRDatabase
+    branch: master
+  # jec:
+  #   type: localdir
+  #   dir: /path/to/local/JECDatabase
+  # jer:
+  #   type: localdir
+  #   dir: /path/to/local/JRDatabase
+
+# working directory for downloaded tarballs
+# (will be created if it does not exist)
+work_dir: work
+
+# output directory for created JSON files
+# (will be created if it does not exist)
+output_dir: json_files
+
+# default values (can be overridden per-era)
+defaults:
+  # correction version, needs to be incremented every time
+  # corrections with the same name are updated after being
+  # published in the `jsonpog-integration` repo
+  correction_version: 2
+
+  # jet algorithms to process
+  algos:
+  - AK4PFchs
+
+  # output JSON files to produce
+  outputs:
+    - name: jet_jerc
+      algos:
+      - AK4PFchs
+
+  # uncertainty sets
+  uncertainty_sets:
+    default:
+      filename_prefix: ""
+      uncertainty_prefix: ""
+    regrouped:
+      filename_prefix: "RegroupedV2_"
+      uncertainty_prefix: "Regrouped_"
+
+  # correction levels
+  levels:
+    jec:
+      simple:
+      - L1FastJet
+      - L2Relative
+      - L3Absolute
+      - L2Residual
+    jer:
+      simple:
+        - PtResolution
+        - EtaResolution
+        - PhiResolution
+        - ScaleFactor
+
+# all possible input variables
+input_variables:
+  JetA:
+    description: "area of the jet"
+    type: real
+    test_values:
+    - 0.12
+  JetEta:
+    description: "pseudorapidity of the jet"
+    type: real
+    test_values:
+    - 0.1
+  JetPhi:
+    description: "azimuthal angle of the jet"
+    type: real
+    test_values:
+    - 0.12
+  JetPt:
+    description: "pT of the jet before specific correction (for JER and uncertainties: after all corrections applied)"
+    type: real
+    test_values:
+    - 200
+  Rho:
+    description: "energy density rho (as measure of PU)"
+    type: real
+    test_values:
+    - 20
+  systematic:
+    description: "systematics: nom, up, down"
+    type: string
+    test_values:
+    - nom
+    - up
+    - down
+
+# eras for which to provide JSON files
+eras:
+  Run2Summer20UL16:
+    jec:
+      names:
+        - Summer20UL16_RunFGH_V2_DATA
+        - Summer20UL16_V2_MC
+    jer:
+      names:
+        - Summer20UL16_JRV4_MC
+
+  Run2Summer20UL16APV:
+    jec:
+      names:
+        - Summer20UL16APV_RunBCDEF_V2_DATA
+        - Summer20UL16APV_V2_MC
+    jer:
+      names:
+        - Summer20UL16APV_JRV4_MC
+
+  Run2Summer20UL17:
+    jec:
+      names:
+        - Summer20UL17_RunB_V2_DATA
+        - Summer20UL17_RunC_V2_DATA
+        - Summer20UL17_RunD_V2_DATA
+        - Summer20UL17_RunE_V2_DATA
+        - Summer20UL17_RunF_V2_DATA
+        - Summer20UL17_V2_MC
+    jer:
+      names:
+        - Summer20UL17_JRV1_MC
+
+  Run2Summer20UL18:
+    jec:
+      names:
+        - Summer20UL18_RunA_V2_DATA
+        - Summer20UL18_RunB_V2_DATA
+        - Summer20UL18_RunC_V2_DATA
+        - Summer20UL18_RunD_V2_DATA
+        - Summer20UL18_V2_MC
+    jer:
+      names:
+        - Summer20UL18_JRV1_MC
+

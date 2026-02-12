@@ -1,0 +1,9 @@
+
+{
+  "genJetPick": {
+    "minPt": 10.0,
+    "minPtForAK8": 180.0,
+    "maxDeltaR": 0.2,
+    "maxDeltaRForAK8": 0.4
+  }
+}

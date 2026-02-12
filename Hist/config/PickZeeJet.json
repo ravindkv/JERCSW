@@ -1,0 +1,16 @@
+{
+  "electronPick": {
+    "minPtLead": 25.0,
+    "minPtSubLead": 15.0,
+    "maxEta": 2.4,
+    "tightId": 4,
+    "ebEeGap": {
+      "min": 1.4442,
+      "max": 1.566
+    }
+  },
+  "genElectronPick": {
+    "pdgId": 11
+  }
+}
+

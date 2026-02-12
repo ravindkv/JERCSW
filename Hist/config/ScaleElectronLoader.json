@@ -1,0 +1,61 @@
+{
+  "2016Pre": {
+    "eleSsJsonPath": "POG/EGM/Run2-2016preVFP-UL-NanoAODv15/electronSS_EtDependent.json.gz",
+    "eleSsName": "EGMScale_EleGain_2016",
+
+    "eleIdSfPath":   "POG/EGM/Electron/egammaEffi.txt_Ele_Tight_preVFP_EGM2D.root",
+    "eleRecoSfPath": "POG/EGM/Electron/egammaEffi_ptAbove20.txt_EGM2D_UL2016preVFP.root",
+    "eleTrigSfPath": {
+        "ZeeJet": "POG/EGM/Electron/egammaEffi.txt_TrigSFTightID_2016Pre.root",
+        "Wqqe":   "POG/EGM/Electron/egammaEffi.txt_TrigSFTightID_2016Pre.root"
+    },
+    "eleIdSfHist":   "EGamma_SF2D",
+    "eleRecoSfHist": "EGamma_SF2D",
+    "eleTrigSfHist": "EGamma_SF2D"
+  },
+  "2016Post": {
+    "eleSsJsonPath": "POG/EGM/Run2-2016postVFP-UL-NanoAODv15/electronSS_EtDependent.json.gz",
+    "eleSsName": "EGMScale_EleGain_2016",
+
+    "eleIdSfPath":   "POG/EGM/Electron/egammaEffi.txt_Ele_Tight_postVFP_EGM2D.root",
+    "eleRecoSfPath": "POG/EGM/Electron/egammaEffi_ptAbove20.txt_EGM2D_UL2016postVFP.root",
+    "eleTrigSfPath": {
+        "ZeeJet": "POG/EGM/Electron/egammaEffi.txt_TrigSFTightID_2016Post.root",
+        "Wqqe":   "POG/EGM/Electron/egammaEffi.txt_TrigSFTightID_2016Post.root"
+    },
+
+    "eleIdSfHist":   "EGamma_SF2D",
+    "eleRecoSfHist": "EGamma_SF2D",
+    "eleTrigSfHist": "EGamma_SF2D"
+  },
+  "2017": {
+    "eleSsJsonPath": "POG/EGM/Run2-2017-UL-NanoAODv15/electronSS_EtDependent.json.gz",
+    "eleSsName": "EGMScale_EleGain_2017",
+
+    "eleIdSfPath":   "POG/EGM/Electron/egammaEffi.txt_EGM2D_Tight_UL17.root",
+    "eleRecoSfPath": "POG/EGM/Electron/egammaEffi_ptAbove20.txt_EGM2D_UL2017.root",
+    "eleTrigSfPath": {
+        "ZeeJet": "POG/EGM/Electron/egammaEffi.txt_TrigSFTightID_2017.root",
+        "Wqqe":   "POG/EGM/Electron/egammaEffi.txt_TrigSFTightID_2017.root"
+    },
+    "eleIdSfHist":   "EGamma_SF2D",
+    "eleRecoSfHist": "EGamma_SF2D",
+    "eleTrigSfHist": "EGamma_SF2D"
+  },
+  "2018": {
+    "eleSsJsonPath": "POG/EGM/Run2-2018-UL-NanoAODv15/electronSS_EtDependent.json.gz",
+    "eleSsName": "EGMScale_EleGain_2018",
+
+    "eleIdSfPath":   "POG/EGM/Electron/egammaEffi.txt_Ele_Tight_EGM2D.root",
+    "eleRecoSfPath": "POG/EGM/Electron/egammaEffi_ptAbove20.txt_EGM2D_UL2018.root",
+    "eleTrigSfPath": {
+        "ZeeJet": "POG/EGM/Electron/egammaEffi.txt_TrigSFTightID_2018.root",
+        "Wqqe":   "POG/EGM/Electron/egammaEffi.txt_TrigSFTightID_2018.root"
+    },
+
+    "eleIdSfHist":   "EGamma_SF2D",
+    "eleRecoSfHist": "EGamma_SF2D",
+    "eleTrigSfHist": "EGamma_SF2D"
+  }
+}
+

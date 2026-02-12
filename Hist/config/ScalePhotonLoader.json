@@ -1,0 +1,51 @@
+{
+  "2016Pre": {
+    "phoSsJsonPath": "POG/EGM/Run2-2016preVFP-UL-NanoAODv15/photonSS_EtDependent.json.gz",
+    "phoSsName": "EGMScale_PhoGain_2016",
+
+    "phoIdSfPath": "POG/EGM/Photon/egammaEffi.txt_EGM2D_Pho_Tight_UL16.root",
+    "phoPsSfPath": "POG/EGM/Photon/HasPix_SummaryPlot_UL16_preVFP.root",
+    "phoCsSfPath": "POG/EGM/Photon/CSEV_SummaryPlot_UL16_preVFP.root",
+
+    "phoIdSfHist": "EGamma_SF2D",
+    "phoPsSfHist": "TightID/SF_HasPix_TightID",
+    "phoCsSfHist": "TightID/SF_CSEV_TightID"
+  },
+  "2016Post": {
+    "phoSsJsonPath": "POG/EGM/Run2-2016postVFP-UL-NanoAODv15/photonSS_EtDependent.json.gz",
+    "phoSsName": "EGMScale_PhoGain_2016",
+
+    "phoIdSfPath": "POG/EGM/Photon/egammaEffi.txt_EGM2D_Pho_Tight_UL16_postVFP.root",
+    "phoPsSfPath": "POG/EGM/Photon/HasPix_SummaryPlot_UL16_postVFP.root",
+    "phoCsSfPath": "POG/EGM/Photon/CSEV_SummaryPlot_UL16_postVFP.root",
+
+    "phoIdSfHist": "EGamma_SF2D",
+    "phoPsSfHist": "TightID/SF_HasPix_TightID",
+    "phoCsSfHist": "TightID/SF_CSEV_TightID"
+  },
+  "2017": {
+    "phoSsJsonPath": "POG/EGM/Run2-2017-UL-NanoAODv15/photonSS_EtDependent.json.gz",
+    "phoSsName": "EGMScale_PhoGain_2017",
+
+    "phoIdSfPath": "POG/EGM/Photon/egammaEffi.txt_EGM2D_PHO_Tight_UL17.root",
+    "phoPsSfPath": "POG/EGM/Photon/HasPix_SummaryPlot_UL17.root",
+    "phoCsSfPath": "POG/EGM/Photon/CSEV_SummaryPlot_UL17.root",
+
+    "phoIdSfHist": "EGamma_SF2D",
+    "phoPsSfHist": "TightID/SF_HasPix_TightID",
+    "phoCsSfHist": "TightID/SF_CSEV_TightID"
+  },
+  "2018": {
+    "phoSsJsonPath": "POG/EGM/Run2-2018-UL-NanoAODv15/photonSS_EtDependent.json.gz",
+    "phoSsName": "EGMScale_PhoGain_2018",
+
+    "phoIdSfPath": "POG/EGM/Photon/egammaEffi.txt_EGM2D_Pho_Tight.root_UL18.root",
+    "phoPsSfPath": "POG/EGM/Photon/HasPix_SummaryPlot_UL18.root",
+    "phoCsSfPath": "POG/EGM/Photon/CSEV_SummaryPlot_UL18.root",
+
+    "phoIdSfHist": "EGamma_SF2D",
+    "phoPsSfHist": "TightID/SF_HasPix_TightID",
+    "phoCsSfHist": "TightID/SF_CSEV_TightID"
+  }
+}
+

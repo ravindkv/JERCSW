@@ -1,0 +1,24 @@
+{
+  "applyHemVeto": true,
+  "runThreshold": 319077,
+  "mcWeight": 0.65,
+  
+  "elePtMin": 15.0,
+  "eleEtaMin": -3.0,
+  "eleEtaMax": -1.3,
+  "elePhiMin": -1.57,
+  "elePhiMax": -0.87,
+  
+  "phoPtMin": 15.0,
+  "phoEtaMin": -3.0,
+  "phoEtaMax": -1.3,
+  "phoPhiMin": -1.57,
+  "phoPhiMax": -0.87,
+  
+  "jetPtMin": 0.0,
+  "jetEtaMin": -3.0,
+  "jetEtaMax": -1.3,
+  "jetPhiMin": -1.57,
+  "jetPhiMax": -0.87
+}
+

@@ -1,0 +1,11 @@
+{
+  "diJetPick": {
+    "minPtTnP":       15.0,
+    "minPtTnPForAK8": 180.0,
+    "jetIdLabel":     "TightLepVeto",
+    "minPtOther":      15.0,
+    "maxEtaTag":        1.3,
+    "useDeterministicSwap": true
+  }
+}
+

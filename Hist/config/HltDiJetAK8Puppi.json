@@ -1,0 +1,19 @@
+{
+  "2018": {
+    "HLT_AK8PFJet140": { "trigPt": 140, "ptMin": 155, "ptMax": 210, "absEtaMin": 0.0, "absEtaMax": 2.964, "lumi": 0.0471 },
+    "HLT_AK8PFJet200": { "trigPt": 200, "ptMin": 210, "ptMax": 300, "absEtaMin": 0.0, "absEtaMax": 2.964, "lumi": 0.2026 },
+    "HLT_AK8PFJet260": { "trigPt": 260, "ptMin": 300, "ptMax": 400, "absEtaMin": 0.0, "absEtaMax": 2.964, "lumi": 0.4657 },
+    "HLT_AK8PFJet320": { "trigPt": 320, "ptMin": 400, "ptMax": 500, "absEtaMin": 0.0, "absEtaMax": 2.964, "lumi": 1.2403 },
+    "HLT_AK8PFJet400": { "trigPt": 400, "ptMin": 500, "ptMax": 600, "absEtaMin": 0.0, "absEtaMax": 2.964, "lumi": 3.7198 },
+    "HLT_AK8PFJet450": { "trigPt": 450, "ptMin": 600, "ptMax": 800, "absEtaMin": 0.0, "absEtaMax": 2.964, "lumi": 7.3913 },
+    "HLT_AK8PFJet500": { "trigPt": 500, "ptMin": 800, "ptMax": 1200, "absEtaMin": 0.0, "absEtaMax": 2.964, "lumi": 59.8278 },
+    "HLT_AK8PFJet550": { "trigPt": 550, "ptMin": 1200, "ptMax": 6500, "absEtaMin": 0.0, "absEtaMax": 2.964, "lumi": 59.8278 },
+    "HLT_AK8PFJetFwd140": { "trigPt": 140, "ptMin": 155, "ptMax": 210, "absEtaMin": 2.964, "absEtaMax": 5.2, "lumi": 0.1113 },
+    "HLT_AK8PFJetFwd200": { "trigPt": 200, "ptMin": 210, "ptMax": 300, "absEtaMin": 2.964, "absEtaMax": 5.2, "lumi": 1.3911 },
+    "HLT_AK8PFJetFwd260": { "trigPt": 260, "ptMin": 300, "ptMax": 400, "absEtaMin": 2.964, "absEtaMax": 5.2, "lumi": 7.0893 },
+    "HLT_AK8PFJetFwd320": { "trigPt": 320, "ptMin": 400, "ptMax": 500, "absEtaMin": 2.964, "absEtaMax": 5.2, "lumi": 21.6918 },
+    "HLT_AK8PFJetFwd400": { "trigPt": 400, "ptMin": 500, "ptMax": 600, "absEtaMin": 2.964, "absEtaMax": 5.2, "lumi": 59.8278 },
+    "HLT_AK8PFJetFwd450": { "trigPt": 450, "ptMin": 600, "ptMax": 800, "absEtaMin": 2.964, "absEtaMax": 5.2, "lumi": 59.8278 },
+    "HLT_AK8PFJetFwd500": { "trigPt": 500, "ptMin": 800, "ptMax": 6500, "absEtaMin": 2.964, "absEtaMax": 5.2, "lumi": 59.8278 }
+  }
+}

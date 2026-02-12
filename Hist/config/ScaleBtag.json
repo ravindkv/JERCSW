@@ -1,0 +1,35 @@
+{
+  "2016Pre": {
+    "btvJsonPath": "POG/BTV/2016preVFP_UL/btagging.json",
+    "btagEffPath": "POG/BTV/btag_efficiencies_2016.root",
+
+    "algo": "deepJet",
+    "wp":   "M",
+    "effType": "Other"         
+  },
+  "2016Post": {
+    "btvJsonPath": "POG/BTV/2016postVFP_UL/btagging.json",
+    "btagEffPath": "POG/BTV/btag_efficiencies_2016.root",
+
+    "algo": "deepJet",
+    "wp":   "M",
+    "effType": "Other"
+  },
+  "2017": {
+    "btvJsonPath": "POG/BTV/2017_UL/btagging.json",
+    "btagEffPath": "POG/BTV/btag_efficiencies_2017.root",
+
+    "algo": "deepJet",
+    "wp":   "M",
+    "effType": "Other"
+  },
+  "2018": {
+    "btvJsonPath": "POG/BTV/2018_UL/btagging.json",
+    "btagEffPath": "POG/BTV/btag_efficiencies_2018.root",
+
+    "algo": "deepJet",
+    "wp":   "M",
+    "effType": "Other"
+  }
+}
+

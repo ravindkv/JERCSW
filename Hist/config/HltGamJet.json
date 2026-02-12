@@ -1,0 +1,33 @@
+{
+  "2016": {
+    "HLT_Photon175": { "ptMin": 230, "ptMax": 4000, "lumi": 36.31 },
+    "HLT_Photon165_R9Id90_HE10_IsoM": { "ptMin": 175, "ptMax": 230, "lumi": 36.31 },
+    "HLT_Photon120_R9Id90_HE10_IsoM": { "ptMin": 130, "ptMax": 175, "lumi": 14.6641 },
+    "HLT_Photon90_R9Id90_HE10_IsoM": { "ptMin": 105, "ptMax": 130, "lumi": 5.2281 },
+    "HLT_Photon75_R9Id90_HE10_IsoM": { "ptMin": 85, "ptMax": 105, "lumi": 2.5982 },
+    "HLT_Photon50_R9Id90_HE10_IsoM": { "ptMin": 60, "ptMax": 85, "lumi": 0.5061 },
+    "HLT_Photon36_R9Id90_HE10_IsoM": { "ptMin": 40, "ptMax": 60, "lumi": 0.2205 },
+    "HLT_Photon30_R9Id90_HE10_IsoM": { "ptMin": 35, "ptMax": 40, "lumi": 0.0984 },
+    "HLT_Photon22_R9Id90_HE10_IsoM": { "ptMin": 20, "ptMax": 35, "lumi": 0.0193 }
+  },
+  "2017": {
+    "HLT_Photon200": { "ptMin": 230, "ptMax": 4000, "lumi": 41.478 },
+    "HLT_Photon165_R9Id90_HE10_IsoM": { "ptMin": 175, "ptMax": 230, "lumi": 28.3161 },
+    "HLT_Photon120_R9Id90_HE10_IsoM": { "ptMin": 130, "ptMax": 175, "lumi": 7.7975 },
+    "HLT_Photon90_R9Id90_HE10_IsoM": { "ptMin": 105, "ptMax": 130, "lumi": 2.641 },
+    "HLT_Photon75_R9Id90_HE10_IsoM": { "ptMin": 85, "ptMax": 105, "lumi": 1.3263 },
+    "HLT_Photon50_R9Id90_HE10_IsoM": { "ptMin": 60, "ptMax": 85, "lumi": 0.3074 },
+    "HLT_Photon30_HoverELoose": { "ptMin": 35, "ptMax": 60, "lumi": 0.0023 },
+    "HLT_Photon20_HoverELoose": { "ptMin": 20, "ptMax": 35, "lumi": 0.0006 }
+  },
+  "2018": {
+    "HLT_Photon200": { "ptMin": 230, "ptMax": 4000, "lumi": 59.8278 },
+    "HLT_Photon110EB_TightID_TightIso": { "ptMin": 130, "ptMax": 230, "lumi": 54.5368 },
+    "HLT_Photon100EB_TightID_TightIso": { "ptMin": 105, "ptMax": 130, "lumi": 6.8187 },
+    "HLT_Photon90_R9Id90_HE10_IsoM": { "ptMin": 95, "ptMax": 105, "lumi": 1.9057 },
+    "HLT_Photon75_R9Id90_HE10_IsoM": { "ptMin": 85, "ptMax": 95, "lumi": 0.9544 },
+    "HLT_Photon50_R9Id90_HE10_IsoM": { "ptMin": 60, "ptMax": 85, "lumi": 0.2398 },
+    "HLT_Photon30_HoverELoose": { "ptMin": 35, "ptMax": 60, "lumi": 0.0064 },
+    "HLT_Photon20_HoverELoose": { "ptMin": 20, "ptMax": 35, "lumi": 0.0032 }
+  }
+}

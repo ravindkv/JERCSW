@@ -1,0 +1,34 @@
+{
+  "photonPick": {
+    "minPt": 15.0,
+    "minPtForAK8": 180.0,
+    "maxEta": 1.3,
+    "tightId": 3,
+    "maxR9": 1.0,
+    "minR9": 0.94,
+    "maxHoe": 0.02148,
+    "isEleVeto": true,
+    "hasPixelSeed": false
+  },
+  "jetPick": {
+    "minPt": 15.0,
+    "minPtForAK8": 180.0,
+    "maxEtaProbe": 1.3,
+    "jetIdLabel": "TightLepVeto",
+    "minDeltaR": 0.4,
+    "applyJetIdToJet2": false,
+    "applyEtaToJet2": false
+
+  },
+  "genPhotonPick": {
+    "minPt":15.0,
+    "minPtForAK8": 180.0,
+    "pdgId": 22
+  },
+  "genTagPick": {
+    "maxDeltaR": 0.1,
+    "minPt":15.0,
+    "minPtForAK8": 180.0
+  }
+}
+

@@ -1,0 +1,20 @@
+{
+  "cutflows": [
+    "passSkim",
+    "passHlt",
+    "passGoodLumi",
+    "passExactly1Probe",
+    "passAtleast2Recoil",
+    "passJetVetoMap",
+    "passDeltaPhiProbeAndRecoil",
+    "passVetoNearByJets",
+    "passHardestInRecoil",
+    "passMultiJet"
+  ],
+  "minTagPts": [30, 200],
+  "minRecoilJets":     2,
+  "dPhiWindow":        0.3,
+  "maxRecoilFraction": 0.7,
+  "fillPerHlt": false
+}
+
