@@ -65,7 +65,7 @@ bool L2ResidualBaseModule::analyze(Context& ctx, Event&) {
 
     HistL2ResidualInput input = computeResponse(objects, p4CorrMet);
 
-    const bool passResp = input.resp > minResp_ && input.resp < maxResp_;
+    const bool passResp = input.relDbResp > minResp_ && input.relDbResp < maxResp_;
     if (!passResp) {
         return true;
     }

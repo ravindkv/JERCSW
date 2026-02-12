@@ -3,7 +3,10 @@
 #include "PickGenJet.h"
 #include "PickZmmJet.h"
 #include "ReadConfig.h"
+#include "ScaleMuon.h"
+#include "JecUncBand.h"
 #include "fwk/Context.h"
+#include "fwk/ScaleMuonModule.h"
 
 namespace fwk {
 
