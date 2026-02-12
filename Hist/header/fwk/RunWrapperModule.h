@@ -19,7 +19,7 @@ public:
 
     bool analyze(Context& ctx, Event&) override {
         if (hasRun_) {
-            return false;
+            return true;
         }
 
         hasRun_ = true;
@@ -29,7 +29,7 @@ public:
         if (code != 0) {
             throw std::runtime_error("Run module failed: " + label_);
         }
-        return false;
+        return true;
     }
 
 private:
