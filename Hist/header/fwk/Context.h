@@ -18,6 +18,8 @@ struct Context {
     explicit Context(const GlobalFlag& gfIn)
         : gf(gfIn) {}
 
+    ~Context();
+
     const GlobalFlag& gf;
 
     std::shared_ptr<SkimTree> skimT;

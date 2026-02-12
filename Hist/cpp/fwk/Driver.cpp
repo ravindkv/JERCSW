@@ -1,6 +1,7 @@
 #include "fwk/Driver.h"
 
 #include "fwk/Event.h"
+#include "fwk/OutputService.h"
 
 namespace fwk {
 

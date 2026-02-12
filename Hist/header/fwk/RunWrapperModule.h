@@ -5,6 +5,7 @@
 #include <string>
 
 #include "fwk/IModule.h"
+#include "fwk/OutputService.h"
 
 namespace fwk {
 
