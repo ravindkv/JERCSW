@@ -17,13 +17,13 @@
 namespace fwk {
 
 L2ResidualBaseModule::L2ResidualBaseModule(const GlobalFlag& gf)
-    : globalFlags_(gf) {
-    loadChannelConfig(configPath());
-}
+    : globalFlags_(gf) {}
 
 L2ResidualBaseModule::~L2ResidualBaseModule() = default;
 
 void L2ResidualBaseModule::beginJob(Context& ctx) {
+    loadChannelConfig(configPath());
+
     assert(ctx.out && ctx.out->file() && !ctx.out->file()->IsZombie());
     ctx.out->mkdirAndCd("Base");
     origDir_ = gDirectory;
